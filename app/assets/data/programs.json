@@ -36,10 +36,10 @@
     "domains": ["dashboard.hackclub.com", "toolbox.hackclub.com"]
   },
   {
-    "id": "summer-of-making",
-    "name": "Summer of Making",
-    "description": "Hack Club's Flagship Summer event for 2025",
-    "domains": ["summer.hackclub.com"]
+    "id": "flavortown",
+    "name": "Flavortown",
+    "description": "Hack Club's Flagship Winter/Spring event for 2026",
+    "domains": ["flavortown.hackclub.com"]
   },
   {
     "id": "hackatime",
