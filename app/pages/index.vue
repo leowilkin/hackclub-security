@@ -36,6 +36,11 @@
         <div class="rounded-2xl my-8">
           <h2 class="text-2xl font-bold mb-4 text-white">Participating Programs</h2>
           <p class="text-xl text-secondary mb-6">All Hack Club programs are under this security program. Here are a highlights of programs that are currently participating in the security bounty program:</p>
+          <div class="mb-6 p-6 bg-orange/10 border border-orange/30 rounded-xl">
+            <p class="text-white text-lg">
+              <span class="font-bold text-orange">Heads up:</span> Reports for <span class="font-bold">HCB</span> (<span class="font-mono">hcb.hackclub.com</span>, <span class="font-mono">bank.engineering</span>) are governed by HCB's own security program terms, <span class="font-bold">not</span> the overall Hack Club Security Program terms on this page. Review and follow HCB's terms before submitting: <a href="https://hcb.hackclub.com/security" target="_blank" rel="noopener noreferrer" class="text-orange font-semibold underline hover:text-orange/80 transition-colors">hcb.hackclub.com/security</a>.
+            </p>
+          </div>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div v-for="program in programs" :key="program.id" class="p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition-colors">
               <h3 class="text-lg font-bold text-white mb-2">{{ program.name }}</h3>
@@ -45,6 +50,15 @@
                   {{ domain }}
                 </div>
               </div>
+              <a
+                v-if="program.terms"
+                :href="program.terms"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-3 inline-block text-xs text-orange font-semibold underline hover:text-orange/80 transition-colors"
+              >
+                Reports governed by {{ program.name }}'s own terms →
+              </a>
             </div>
           </div>
         </div>

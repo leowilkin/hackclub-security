@@ -3,7 +3,8 @@
     "id": "hcb",
     "name": "HCB",
     "description": "Fiscal sponsorship platform for student organizations and non-profits",
-    "domains": ["hcb.hackclub.com", "bank.engineering"]
+    "domains": ["hcb.hackclub.com", "bank.engineering"],
+    "terms": "https://hcb.hackclub.com/security"
   },
   {
     "id": "hackclub-com",

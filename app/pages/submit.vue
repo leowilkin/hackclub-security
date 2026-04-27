@@ -86,6 +86,13 @@
               <p class="text-lg text-secondary">Select all that apply. This helps us figure out the right people to contact</p>
             </div>
 
+            <div v-if="form.affected.includes('hcb')" class="p-4 bg-orange/10 border border-orange/30 rounded-lg">
+              <p class="text-white text-md">
+                <span class="font-bold text-orange">HCB has its own terms.</span> Reports affecting HCB are governed by HCB's security program terms, not the overall Hack Club Security Program terms. Please review them before submitting:
+                <a href="https://hcb.hackclub.com/security" target="_blank" rel="noopener noreferrer" class="text-orange font-semibold underline hover:text-orange/80 transition-colors">hcb.hackclub.com/security</a>.
+              </p>
+            </div>
+
             <div class="grid md:grid-cols-2 gap-4">
               <div 
                 v-for="program in p" 
