@@ -17,19 +17,27 @@ export async function shoot(
 ): Promise<boolean> {
   try {
     const r = new Resend(apiKey)
-    
-    const a = `Security Report: ${data.title}
-ID: ${data.id}
-Reporter: ${data.name}
-Email: ${data.email}
-Type: ${data.vulnType}
-Severity: ${data.severity}
-Assets: ${data.affectedPrograms.join(', ')}
-Region: ${data.region}
-Time: ${data.timestamp}
+
+    const esc = (s: string) =>
+      s
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;')
+
+    const a = `Security Report: ${esc(data.title)}
+ID: ${esc(data.id)}
+Reporter: ${esc(data.name)}
+Email: ${esc(data.email)}
+Type: ${esc(data.vulnType)}
+Severity: ${esc(data.severity)}
+Assets: ${data.affectedPrograms.map(esc).join(', ')}
+Region: ${esc(data.region)}
+Time: ${esc(data.timestamp)}
 
 Description:
-${data.description}`
+${esc(data.description)}`
 
     await r.emails.send({
       from: 'Hack Club Security Report <tmbx@outbound.3kh0.net>',
