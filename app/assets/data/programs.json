@@ -13,6 +13,12 @@
     "domains": ["hackclub.com"]
   },
   {
+    "id": "attend",
+    "name": "Attend",
+    "description": "Hack Club's event management system",
+    "domains": ["attend.hackclub.com"]
+  },
+  {
     "id": "moonshot",
     "name": "Moonshot",
     "description": "You and 100 Hack Clubbers will fly to Orlando, Florida, December 12–15.",
